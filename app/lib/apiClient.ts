@@ -2,11 +2,16 @@ import axios, { AxiosInstance, AxiosResponse, AxiosError, InternalAxiosRequestCo
 import { ErrorResponse } from '../types/auth';
 
 /**
+ * Base API URL for the backend service
+ */
+const API_BASE_URL = 'http://localhost:8000';
+
+/**
  * Axios instance configured for authentication API calls
  * Includes proper cookie handling and error response formatting
  */
 export const apiClient: AxiosInstance = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_NEST_API_URL || 'http://localhost:8000',
+  baseURL: API_BASE_URL,
   timeout: 10000, // 10 seconds timeout
   withCredentials: true, // Essential for HTTP-only cookies
   headers: {
@@ -91,7 +96,7 @@ apiClient.interceptors.response.use(
       try {
         // Call refresh endpoint directly to avoid circular dependency
         const refreshResponse = await axios.post(
-          `${process.env.NEXT_PUBLIC_NEST_API_URL || 'http://localhost:8000'}/auth/refresh`,
+          `${API_BASE_URL}/auth/refresh`,
           {},
           {
             withCredentials: true,
