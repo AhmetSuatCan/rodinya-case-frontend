@@ -1,0 +1,42 @@
+import { ImageResponse } from 'next/og'
+
+export const runtime = 'edge'
+
+export const size = {
+  width: 32,
+  height: 32,
+}
+
+export const contentType = 'image/svg+xml'
+
+export default function Icon() {
+  return new ImageResponse(
+    (
+      <svg
+        width="32"
+        height="32"
+        viewBox="0 0 32 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style={{ stopColor: '#2563eb', stopOpacity: 1 }} />
+            <stop offset="100%" style={{ stopColor: '#9333ea', stopOpacity: 1 }} />
+          </linearGradient>
+        </defs>
+        <rect width="32" height="32" rx="6" fill="url(#gradient)" />
+        <path
+          d="M8 10h2l1.68 8.39a2 2 0 0 0 2 1.61h8.64a2 2 0 0 0 2-1.61L26 10H8zm0 0V8a2 2 0 0 1 2-2h2m8 4V8a2 2 0 0 1 2-2h2"
+          stroke="white"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+    {
+      ...size,
+    }
+  )
+}
