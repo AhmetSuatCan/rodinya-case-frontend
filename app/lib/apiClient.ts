@@ -4,7 +4,7 @@ import { ErrorResponse } from '../types/auth';
 /**
  * Base API URL for the backend service
  */
-const API_BASE_URL = 'http://45.141.151.112:80';
+const API_BASE_URL = 'https://api.rodinya-case.ahmetsuatcan.com';
 
 /**
  * Axios instance configured for authentication API calls
