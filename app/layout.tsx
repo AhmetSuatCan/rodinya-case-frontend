@@ -16,6 +16,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Rodinya Ordering - Online Shopping Platform",
   description: "Browse products, manage orders, and enjoy a seamless shopping experience with Rodinya Ordering.",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
