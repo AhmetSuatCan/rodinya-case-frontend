@@ -4,7 +4,7 @@ import { ErrorResponse } from '../types/auth';
 /**
  * Base API URL for the backend service
  */
-const API_BASE_URL = 'http://localhost:8000';
+const API_BASE_URL = 'http://localhost:80';
 
 /**
  * Axios instance configured for authentication API calls
